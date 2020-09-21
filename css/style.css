@@ -1,0 +1,103 @@
+:root {
+    --blue: #109eff;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.jumbo-sec {
+    position: relative;
+    width: 100%;
+    color: #eee;
+    background: var(--blue);
+    background-image: url(../media/turntables.jpeg);
+    background-size: cover;
+    background-position: bottom 50% right 0;
+    background-repeat: no-repeat;
+}
+
+.username {
+    text-shadow: 1px 1px 1px black;
+}
+
+.connections {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px 8px;
+    /* border: 1px solid green; */
+}
+
+.jumbo-text {
+    color: #eee;
+    text-shadow: 1px 1px 1px black;
+}
+
+.section {
+    padding: 30px 0;
+}
+
+.sort-item:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+.searchbar {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.main {
+    position: relative; 
+}
+
+
+.aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
+
+.aside ul {
+    list-style-type: none;
+}
+
+.searchbar {
+    margin-bottom: 10px;
+}
+
+.search-sort {
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.colophon {
+    text-align: center;
+}
+
+.fav-row {
+    margin-bottom: 5px; 
+}
+
+@media (min-width: 768px) {
+    .card-section {
+        /* height: 900px; */
+        overflow: auto;
+    }
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #222;
+    color: #fff;
+}
+
+
+

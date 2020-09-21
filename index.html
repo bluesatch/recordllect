@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap4.css"> -->
+    <title>VinyLog</title>
+</head>
+<body>
+    <!-- jumbotron -->
+    <header class="header">
+        <div class="jumbotron jumbotron-fluid jumbo-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="user-box">
+                            <h1 id="username"class="username display-1">Satch</h1>
+                            <p class="jumbo-text">Member since <span id="account-age"class="account-age">Sep 2020</span></p>
+                            <p id="collection" class="collection jumbo-text">Collection: <span id="collection-total" class="collection-total">1967</span></p>
+                            <button id="login" class="login btn btn-primary btn-sm">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="connections">
+                            <p class="following">Following: <span class="following-count">100</span></p>
+                            <p class="followers">Followers: <span class="follower-count">100</span></p>
+                            <button id="followButton" class="followButton btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <section class="row search-sort">
+                <div class="col-sm-9">
+                    <input type="search" value="" class="searchbar" placeholder="Search Artist, Album, Year, Label">
+                </div>
+                <div class="col-sm-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Sort By:</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item sort-item" id="artistDown" type="button">Artist: A-Z</button>
+                            <button class="dropdown-item sort-item" id="artistUp" type="button">Artist: Z-A</button>
+                            <button class="dropdown-item sort-item" id="albumDown" type="button">Album: A-Z</button>
+                            <button class="dropdown-item sort-item" id="albumUp" type="button">Album: Z-A</button>
+                            <button class="dropdown-item sort-item" id="yearDown" type="button">Yr Released: Old to New</button>
+                            <button class="dropdown-item sort-item" id="yearUp" type="button">Yr Released: New to Old</button>
+                            <button class="dropdown-item sort-item" id="addedDown" type="button">Added: Newest Additions</button>
+                            <button class="dropdown-item sort-item" id="addedUp" type="button">Added: Oldest Additions</button>
+                            <button class="dropdown-item sort-item" id="labelDown" type="button">Label: A-Z</button>
+                            <button class="dropdown-item sort-item" id="labelUp" type="button">Label: Z-A</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main class="main container-fluid">
+        <section class="section row">
+            <div class="col-md-9">
+                <div class="card-columns card-section">
+                    <div class="card">
+                        <img src="media/headhunters.jpg" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Herbie Hancock</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Headhunters</h3>
+                            <p id="labelCard" class="label-card">Columbia</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">1973</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/200x200" alt="placeholder img" id="albumImage" class="img-fluid album-img">
+                        <div class="card-body">
+                            <h2 id="artistCard" class="cardheader card-title">Artist Name</h2>
+                            <h3 id="albumCard" class="card-subtitle album-title">Album Name</h3>
+                            <p id="labelCard" class="label-card">Label</p>
+                            <p class="card-text">Year Released: <span class="year-release" id="yearRelease">2020</span></p>
+                            <p class="card-text">Year Added: <span class="year-added" id="yearAdded">2020</span></p>
+                            <footer class="card-footer">
+                                <a href="#link" class="tags">#tags</a>
+                                <a href="#link" class="tags">#tags</a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <aside class="aside d-none d-md-block">
+                    <h2 id="aside-header"class="subheader">Archives</h2>
+                    <ul id="archives-list" class="archives-list list-group list-group-flush">
+                        <li class="list-group-item">Sep 2020</li>
+                        <li class="list-group-item">Aug 2020</li>
+                        <li class="list-group-item">Jul 2020</li>
+                        <li class="list-group-item">2019</li>
+                        <li class="list-group-item">2018</li>
+                    </ul>
+                    <div class="favorites">
+                        <h2 id="favorites-header" class="subheader favorites-header">Favorites</h2>
+                        <div class="row fav-row">
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row fav-row">
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row fav-row">
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/75x75" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wantlist">
+                        <h2 id="want-header" class="subheader want-header">Wantlist</h2>
+                        <div class="row want-row">
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row want-row">
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row want-row">
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-4">
+                                <figure class="favfigure">
+                                    <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                                    <figcaption class="fav-caption">Artist - Album Title</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer class="footer container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <p class="colophon">site by <a href="http://satchwerk.com/" target="_blank">satchwerk</a> &copy;2020</p>    
+            </div>
+            <div class="col-md-3">
+                <nav class="social-nav nav nav-fill">
+                    <a href="#link" class="nav-item">
+                        <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                    </a>
+                    <a href="#link" class="nav-item">
+                        <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                    </a>
+                    <a href="#link" class="nav-item">
+                        <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                    </a>     
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

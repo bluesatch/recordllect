@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VinyLog - Add Album</title>
+</head>
+<body>
+    <header class="header">
+        <div class="jumbotron jumbotron-fluid jumbo-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="user-box">
+                            <h1 id="username"class="username display-1">Satch</h1>
+                            <p class="jumbo-text">Member since <span id="account-age"class="account-age">Sep 2020</span></p>
+                            <p id="collection" class="collection jumbo-text">Collection: <span id="collection-total" class="collection-total">1967</span></p>
+                            <button id="login" class="login btn btn-primary btn-sm">Sign Out</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="connections">
+                            <p class="following">Following: <span class="following-count">100</span></p>
+                            <p class="followers">Followers: <span class="follower-count">100</span></p>
+                            <button id="followButton" class="followButton btn btn-primary">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <section class="row search-sort">
+                <div class="col-sm-9">
+                    <input type="search" value="" class="searchbar" placeholder="Search Artist, Album, Year, Label">
+                </div>
+                <div class="col-sm-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Sort By:</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item sort-item" id="artistDown" type="button">Artist: A-Z</button>
+                            <button class="dropdown-item sort-item" id="artistUp" type="button">Artist: Z-A</button>
+                            <button class="dropdown-item sort-item" id="albumDown" type="button">Album: A-Z</button>
+                            <button class="dropdown-item sort-item" id="albumUp" type="button">Album: Z-A</button>
+                            <button class="dropdown-item sort-item" id="yearDown" type="button">Yr Released: Old to New</button>
+                            <button class="dropdown-item sort-item" id="yearUp" type="button">Yr Released: New to Old</button>
+                            <button class="dropdown-item sort-item" id="addedDown" type="button">Added: Newest Additions</button>
+                            <button class="dropdown-item sort-item" id="addedUp" type="button">Added: Oldest Additions</button>
+                            <button class="dropdown-item sort-item" id="labelDown" type="button">Label: A-Z</button>
+                            <button class="dropdown-item sort-item" id="labelUp" type="button">Label: Z-A</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="headers">Add Album</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="#link" class="add-form">
+                        <input type="text" id="serialNo" value="" placeholder="Serial">
+                        <input type="text" id="artistName" value="" placeholder="Artist Name">
+                        <input type="text" id="albumTitle" value="" placeholder="Album Title">
+                        <input type="text" id="recordLabel" value="" placeholder="Record Label">
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
