@@ -118,7 +118,11 @@ a:hover {
     }
 }
 
-.search-section: {
+.following-count a, .follower-count a {
+    color: #fff;
+}
+
+.search-section {
     padding: 30px 0;
 }
 
@@ -126,4 +130,13 @@ a:hover {
     width: 50%;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+.search-btn {
+    background: #222;
+    text-transform: uppercase;
+}
+
+.album-img {
+    width: 100%;
 }
