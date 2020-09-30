@@ -1,11 +1,17 @@
 :root {
     --blue: #109eff;
     --headerBg: #222;
+    --bodyBg: #eaebee;
 }
 
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bodyBg);
+    color: #222;
 }
 
 a {
@@ -54,7 +60,6 @@ a:hover {
 
 .top-nav-list {
     margin: 0;
-    text-align: right; 
 }
 
 .top-nav-item {
@@ -112,11 +117,7 @@ a:hover {
     text-transform: capitalize;
 }
 
-@media (min-width: 768px) {
-    .txt-right {
-        text-align: right; 
-    }
-}
+
 
 .following-count a, .follower-count a {
     color: #fff;
@@ -127,7 +128,7 @@ a:hover {
 }
 
 .search {
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
     border-radius: 10px;
 }
@@ -137,6 +138,135 @@ a:hover {
     text-transform: uppercase;
 }
 
+/* ------- cards ----------- */
+
 .album-img {
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .album-card {
+        display: none; 
+    }
+}
+
+.added-header {
+    font-size: 16px; 
+    color: #222;
+}
+
+.card-album-title {
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.card-album-artist {
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.card-text {
+    font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0;
+}
+
+.card-footer a {
+    font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.see-more {
+    font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center; 
+    color: var(--blue);
+}
+
+@media (min-width: 768px) {
+    .see-more {
+        display: none;
+    }
+}
+
+
+/* -------- aside --------- */
+
+.aside-header {
+    font-size: 16px; 
+
+}
+
+.archive-list {
+    margin-bottom: 30px;
+    width: 90%;
+    font-size: 12px;
+}
+
+.archive-link {
+    color: #222;
+}
+
+.archive-link:hover {
+    color: var(--blue);
+}
+
+.favorites, .wantlist {
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.fav-link, .want-link {
+    color: #222;
+}
+
+.fav-album, .fav-artist, .want-album, .want-artist {
+    font-size: 12px; 
+    margin: 0;
+}
+
+.fav-img, .want-img {
+    width: 100%;
+}
+
+/* -------- footer ----------- */
+
+.footer {
+    padding: 30px 0;
+    background: #222;
+    color: #fff
+}
+
+.footer-logo {
+    font-size: 16px; 
+}
+
+.branding {
+    font-size: 12px; 
+}
+
+
+@media (max-width: 767px) {
+    .footer-logo, .branding {
+        text-align: center;
+    }
+}
+
+
+.colophon-text {
+    font-size: 12px; 
+    text-align: center; 
+}
+
+.social-div {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+
+}
+
+.footer-list {
+    font-size: 12px; 
+    text-align: right; 
+}
+
+.list1 {
+    text-align: center; 
 }

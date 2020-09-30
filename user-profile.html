@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap4.css"> -->
+    <title>RE(COrd)LLECT</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <!-- top-nav, jumbotron, search -->
+        <div class="top-nav">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-9 col-6">
+                        <h1 class="logo header-logo"><a href="#index.html" class="logo-link">RE(COrd)LLECT</a></h1>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <!-- hamburger-menu -->
+                        <div class="hamburger-menu d-sm-block d-md-none">
+                            <span class="burger-slice"></span>
+                            <span class="burger-slice"></span>
+                            <span class="burger-slice"></span>
+                            <ul id="burger-list" class="burger-list list-group display-off">
+                                <li class="burger-list-item list-group-item"><a href="#link" class="burger-link">username</a></li>
+                                <li class="burger-list-item list-group-item"><a href="#link" class="burger-link">collection (<span id="collection-total"class="collection-total">2030</span>)</a></li>
+                                <li class="burger-list-item list-group-item"><a href="#link" class="burger-link">wantlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="top-navbar d-none d-md-block">
+                            <ul class="top-nav-list list-inline">
+                                <li class="top-nav-item list-inline-item"><a href="#link" class="top-nav-link">collection (<span id="collection-total" class="collection-total">2030</span>)</a></li>
+                                <li class="top-nav-item list-inline-item"><a href="#link" class="top-nav-link">wantlist</a></li>
+                                <li class="top-nav-item list-inline-item"><a href="#link" class="top-nav-link">satch</a></li>
+                                <li class="top-nav-item list-inline-item"><a href="#link" class="top-nav-link">sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="jumbo-sec jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h1 class="jumboheader">Satch</h1>
+                        <p class="jumbotext">member since: <span id="date-created" class="date-created">sep 2020</span></p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="jumbotext txt-right">followers: <span id="follower-count" class="follower-count"><a href="#link">100</a></span></p>
+                        <p class="jumbotext txt-right">following: <span id="following-count" class="following-count"> <a href="#link">100</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="search-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="search-box">
+                            <input type="search" class="search" value="" placeholder="Search Collection">
+                            <button class="btn btn-primary btn-sm search-btn">search</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- follow/unfollow -->
+                        <button class="btn follow-btn btn-sm btn-primary">follow</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main id="main" class="main">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-9">
+                    <section class="section recent-add">
+                        <h2 class="added-header">Recently Added</h2>
+                        <!-- cards -->
+                        <div class="row row-cols-1 row-cols-md-4">
+                            <div class="col mb-4">
+                                <div class="card album-card1">
+                                    <img src="media/headhunters.jpg" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Head Hunters</h2>
+                                        <h3 class="card-album-artist">Herbie Hancock</h3>
+                                        <p class="card-text label">Columbia</p>
+                                        <p class="card-text year">1973</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#BAM</a>
+                                        <a href="#link">#Funk</a>
+                                        <a href="#link">#Soul</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                            <div class="col mb-4">
+                                <div class="card album-card">
+                                    <img src="https://via.placeholder.com/200x200" alt="placeholder img" class="img-fluid album-img">
+                                    <div class="card-body">
+                                        <h2 class="card-album-title">Album Title</h2>
+                                        <h3 class="card-album-artist">Album Artist</h3>
+                                        <p class="card-text label">Label</p>
+                                        <p class="card-text year">2020</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                        <a href="#link">#tag</a>
+                                    </footer>  
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row row-cols-1 row-cols-md-3 -->
+                        <p class="see-more">see more</a></p>
+                    </section> 
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                    <aside id="aside" class="aside">
+                        <div class="archives">
+                            <h2 class="aside-header">Archives</h2>
+                            <ul class="archive-list list-group list-group-flush">
+                                <li class="list-group-item"><a href="#link" class="archive-link">September 2020</a></li>
+                                <li class="list-group-item"><a href="#link" class="archive-link">August 2020</a></li>
+                                <li class="list-group-item"><a href="#link" class="archive-link">July 2020</a></li>
+                                <li class="list-group-item"><a href="#link" class="archive-link">2020</a></li>
+                                <li class="list-group-item"><a href="#link" class="archive-link">2019</a></li>
+                                <li class="list-group-item"><a href="#link" class="archive-link">More</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="favorites">
+                            <h2 class="aside-header">Favorites</h2>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="media/wegotitfromhere.png" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">We Got It From Here...Thanks For Your Service</p>
+                                                <p class="fav-artist">A Tribe Called Quest</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="media/headhunters.jpg" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Head Hunters</p>
+                                                <p class="fav-artist">Herbie Hancock</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="#link" class="fav-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid fav-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="fav-album">Album</p>
+                                                <p class="fav-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wantlist">
+                            <h2 class="aside-header">Wantlist</h2>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="media/demonsdance.png" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Demon's Dance</p>
+                                                <p class="want-artist">Jackie McLean</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                            </div>
+                            <!-- /.row -->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                            </div>
+                            <!-- /.row -->
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                                <div class="col-4">
+                                    <a href="#link" class="want-link">
+                                        <figure class="fav-fig">
+                                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid want-img">
+                                            <figcaption class="fav-cap">
+                                                <p class="want-album">Album</p>
+                                                <p class="want-artist">Artist</p>
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- /.col-4 -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="logo footer-logo">RE(COrd)LLECT</h2>
+                    <p class="branding">a product by satchwerk</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="footer-list list1 d-sm-block d-md-none list-unstyled">
+                        <li>About RE(COrd)LLECT</li>
+                        <li>Contact</li>
+                        <li>Contribute</li>
+                    </ul>
+                    <div class="colophon colophon1 d-none d-md-block">
+                        <p class="colophon-text">site by <a href="#link">satchwerk</a> &copy;2020</p>
+                        <!-- social -->
+                        <div class="social-div">
+                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="footer-list list2 d-none d-md-block list-unstyled">
+                        <li>About RE(COrd)LLECT</li>
+                        <li>Contact</li>
+                        <li>Contribute</li>
+                    </ul>
+                    <div class="colophon colophon2 d-sm-block d-md-none">
+                        <p class="colophon-text">site by <a href="#link">satchwerk</a> &copy;2020</p>
+                        <!-- social -->
+                        <div class="social-div">
+                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                            <img src="https://via.placeholder.com/50x50" alt="placeholder img" class="img-fluid">
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
