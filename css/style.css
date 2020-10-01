@@ -129,14 +129,22 @@ a:hover {
 
 .search {
     width: 30%;
-    margin: 0 auto;
+    font-size: 12px;
     border-radius: 10px;
 }
 
-.search-btn {
+@media (max-width: 767px) {
+    .search {
+        width: 60%;
+    }
+}
+
+.search-btn, .follow-btn {
+    font-size: 10px;
     background: #222;
     text-transform: uppercase;
 }
+
 
 /* ------- cards ----------- */
 
@@ -222,8 +230,17 @@ a:hover {
     margin: 0;
 }
 
-.fav-img, .want-img {
+.fav-img, .want-img, .collection-img {
     width: 100%;
+}
+
+/* .collection-img {
+    width: 50%;
+} */
+
+.collection-title, .collection-artist {
+    width: 80%;
+    font-size: 12px;
 }
 
 /* -------- footer ----------- */
