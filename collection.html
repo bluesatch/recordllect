@@ -65,9 +65,25 @@
                             <button class="btn btn-primary btn-sm search-btn">search</button>
                         </div>
                     </div>
-                    <div class="col-3">
+                    
+                    <div class="col-3 d-flex flex-sm-column flex-md-row">
                         <!-- follow/unfollow -->
-                        <button class="btn btn-primary follow-btn btn-sm btn-primary">follow</button>
+                        <button class="btn btn-primary follow-btn btn-sm btn-primary follow-btn">follow</button>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle btn-sm sort-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By:</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a href="#link" class="dropdown-item sort-item">Album: (A-Z)</a>
+                                <a href="#link" class="dropdown-item sort-item">Album: (Z-A)</a>
+                                <a href="#link" class="dropdown-item sort-item">Artist: (A-Z)</a>
+                                <a href="#link" class="dropdown-item sort-item">Artist: (Z-A)</a>
+                                <a href="#link" class="dropdown-item sort-item">Label: (A-Z)</a>
+                                <a href="#link" class="dropdown-item sort-item">Label: (Z-A)</a>
+                                <a href="#link" class="dropdown-item sort-item">Year: Most Recent</a>
+                                <a href="#link" class="dropdown-item sort-item">Year: Earliest</a>
+                                <a href="#link" class="dropdown-item sort-item">Added: Most Recent</a>
+                                <a href="#link" class="dropdown-item sort-item">Added: Earliest</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,25 +96,8 @@
                 <div class="col-md-9">
                     <section class="section collection-section">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-md-12 collection-heading">
                                 <h2 class="collection-header">Your Collection (<span class="collection-total">2030</span>)</h2>  
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By:</button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a href="#link" class="dropdown-item">Album: (A-Z)</a>
-                                        <a href="#link" class="dropdown-item">Album: (Z-A)</a>
-                                        <a href="#link" class="dropdown-item">Artist: (A-Z)</a>
-                                        <a href="#link" class="dropdown-item">Artist: (Z-A)</a>
-                                        <a href="#link" class="dropdown-item">Label: (A-Z)</a>
-                                        <a href="#link" class="dropdown-item">Label: (Z-A)</a>
-                                        <a href="#link" class="dropdown-item">Year: Most Recent</a>
-                                        <a href="#link" class="dropdown-item">Year: Earliest</a>
-                                        <a href="#link" class="dropdown-item">Added: Most Recent</a>
-                                        <a href="#link" class="dropdown-item">Added: Earliest</a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="row collecton-row">
@@ -362,5 +361,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
