@@ -109,6 +109,12 @@ a:hover {
     text-shadow: 2px 2px 2px #000;
 }
 
+@media (max-width: 767px) {
+    .jumbo-sec{
+        height: 100vh;
+    }
+}
+
 .jumboheader {
     font-size: 4em;
 }
@@ -146,7 +152,27 @@ a:hover {
 }
 
 .follow-btn {
-    margin-right: 20px;
+    margin-bottom: 20px; 
+}
+
+.sort-list {
+    position: relative; 
+    top: 0;
+    left: -100px;
+    background: #222;
+    color: #fff;
+    opacity: 0.80;
+    
+}
+
+@media (max-width: 575px) {
+    .sort-list {
+        left: -120px;
+    }
+}
+
+.sort-list a {
+    color: #fff;
 }
 
 
@@ -198,6 +224,14 @@ a:hover {
     }
 }
 
+.more {
+    font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center; 
+    color: var(--blue);
+}
+
 
 /* -------- aside --------- */
 
@@ -238,15 +272,45 @@ a:hover {
     width: 100%;
 }
 
-/* .collection-img {
-    width: 50%;
-} */
-
-.collection-title, .collection-artist {
-    width: 80%;
-    font-size: 12px;
+.top-artists-header2 {
+    font-size: 16px;
+    text-align: center; 
+    margin-bottom: 15px;
+}
+.top-artist-list {
+    text-align: center; 
 }
 
+.top-artists-row {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.top-artist2-img {
+    border-radius: 50%;
+}
+
+.top-artist-caption {
+    font-size: 8px;
+}
+
+.top-artist-album {
+    font-size: 10px;
+
+}
+.collection-title, .collection-artist {
+    font-size: 10px;
+}
+
+
+.top-artist {
+    font-size: 14px; 
+}
+
+.artist-img {
+    border-radius: 50%;
+}
 /* -------- footer ----------- */
 
 .footer {
